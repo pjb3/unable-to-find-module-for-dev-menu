@@ -1,6 +1,5 @@
 import React from "react"
 import { AppLoading } from "expo"
-import { StatusBar } from "expo-status-bar"
 import { useFonts } from "expo-font"
 import {
   TitilliumWeb_300Light,
@@ -12,7 +11,7 @@ import {
   Lato_700Bold,
 } from "@expo-google-fonts/lato"
 
-import App from "./src/navigation"
+import App from "./src/HomeScreen"
 
 export default () => {
   let [fontsLoaded] = useFonts({
