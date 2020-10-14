@@ -7,6 +7,7 @@ When you run this app in the iOS simulator, you will see a "Unable to find modul
 Clone this repo and then run
 
     npm i -g expo-cli
+    yarn
     expo start
 
 ## Steps
@@ -23,7 +24,7 @@ Press `Cmd+r` to refresh the app.
 
 Now the changes will appears.
 
-Next, make another small change, like change the text back to "Home Screen!"
+Next, make another small change, like change the text back to "Home Screen?"
 
 You should now see the "Unable to find module for DevMenu" error.
 
