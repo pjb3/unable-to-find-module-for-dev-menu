@@ -1,21 +1,31 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react"
+import { AppLoading } from "expo"
+import { StatusBar } from "expo-status-bar"
+import { useFonts } from "expo-font"
+import {
+  TitilliumWeb_300Light,
+  TitilliumWeb_700Bold,
+} from "@expo-google-fonts/titillium-web"
+import {
+  Lato_300Light,
+  Lato_400Regular,
+  Lato_700Bold,
+} from "@expo-google-fonts/lato"
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+import App from "./src/navigation"
+
+export default () => {
+  let [fontsLoaded] = useFonts({
+    TitilliumWeb_300Light,
+    TitilliumWeb_700Bold,
+    Lato_300Light,
+    Lato_400Regular,
+    Lato_700Bold,
+  })
+
+  if (!fontsLoaded) {
+    return <AppLoading />
+  }
+
+  return <App />
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
