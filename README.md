@@ -1,3 +1,13 @@
+# SOLVED
+
+I originally created this repo to reporduce an error I was getting "Unable to find module for DevMenu". I have since discovered the issue is that you can't declare functions as I do in this repo like this:
+
+`export default () => {`
+
+The Expo reloading mechanism doesn't work when you do this. Instead, you need to do this:
+
+`export default function Component()`
+
 # Expo "Unable to find module for DevMenu" Error
 
 When you run this app in the iOS simulator, you will see a "Unable to find module for DevMenu" error
@@ -16,7 +26,7 @@ When you run `expo start`, the Expo DevTools will open in a browser. Choose "Run
 
 The app should load in the simulator and you should see the text "Home Screen?"
 
-Make a simple change in `stc/navigation.js`, for example change the text to "Home Screen!".
+Make a simple change in `src/navigation.js`, for example change the text to "Home Screen!".
 
 The simulator will reload but the changes will not appear.
 
